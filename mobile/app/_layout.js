@@ -1,36 +1,14 @@
-import { Tabs } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
+import { Stack } from "expo-router";
 
 export default function Layout() {
   return (
-    <Tabs>
-      <Tabs.Screen
-        name="index" // file: app/index.js
-        options={{
-          title: "Home",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" size={size} color={color} />
-          ),
-        }}
+    <Stack>
+      <Stack.Screen name="index" options={{ title: "Receipts AU" }} />
+      <Stack.Screen name="add-receipt" options={{ title: "Add Receipt" }} />
+      <Stack.Screen
+        name="add-recurring"
+        options={{ title: "Add Recurring (Personal)" }}
       />
-      <Tabs.Screen
-        name="summary" // file: app/summary.js
-        options={{
-          title: "Summary",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="stats-chart" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="settings" // file: app/settings.js
-        options={{
-          title: "Settings",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="settings" size={size} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+    </Stack>
   );
 }
