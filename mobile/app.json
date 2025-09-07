@@ -34,6 +34,13 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite"
+    ],
+    "extra": {
+      "API_BASE": "http://DEV-SERVER:8080",
+      "API_KEY": "dev-xyz"
     }
   }
 }
